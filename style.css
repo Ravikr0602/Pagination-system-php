@@ -1,0 +1,195 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+   background-color: #dde1e7;
+}
+.title_box
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 4%;
+    font-size: 2rem;
+    border: 1px solid #dde1e7;
+    color: red;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    height: auto;
+    background-color: #dde1e7 ;
+    box-shadow:  -5px -5px 10px rgba(255,255,255,0.8),
+    5px 5px 15px rgba(0, 0, 0, 0.155), 
+    inset -2px -2px 6px rgba(255,255,255,0.8), 
+    inset 2px 2px 6px rgba(0, 0, 0, 0.1);
+
+}
+  .attendance_table { 
+    width: 750px; 
+    border-collapse: collapse; 
+    margin:50px auto;
+    }
+  
+  .table_tr:nth-of-type(odd) { 
+    background: #eee; 
+    }
+  
+  .table_th { 
+    background: #3498db; 
+    color: white; 
+    font-weight: bold; 
+    }
+  
+  .table_td, .table_th { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+    font-size: 18px;
+    }
+  
+
+  @media 
+  only screen and (max-width: 760px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+  
+    .attendance_table { 
+        width: 100%; 
+    }
+  
+    .attendance_table, #table_thead, #table_tbody, .table_th, .table_td, .table_tr { 
+      display: block; 
+    }
+    
+    #table_thead .table_tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    .table_tr { border: 1px solid #ccc; }
+    
+    .table_td { 
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+    }
+  
+    .table_td:before { 
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+      content: attr(data-column);
+      color: #000;
+      font-weight: bold;
+    }
+  
+  }
+
+  .attendance_button
+  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    }
+  .attendance_btn
+  {
+    width: auto;
+    height: auto;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background: #00a8ff;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 900;
+    box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+    transition: 0.5s;
+  }
+  
+  .attendance_btn:hover{
+    box-shadow: none;
+  }
+  
+/********************************************************************************************
+   Pagination design 
+  *********************************************************************************************/
+
+  .page_count{
+    display: grid;
+    height: 100%;
+    place-items: center;
+    text-align: center;
+    background: #dde1e7;
+  }
+  .page_container {
+    background: #dde1e7;
+    padding: 25px;
+    border-radius: 3px;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  }
+  .pagination {
+    display: flex;
+    list-style: none;
+  }
+  .pagination li {
+    flex: 1;
+    margin: 0px 5px;
+    background: #dde1e7;
+    border-radius: 3px;
+    box-shadow: -3px -3px 7px #ffffff73, 3px 3px 5px rgba(94, 104, 121, 0.288);
+  }
+  .pagination li a {
+    font-size: 18px;
+    text-decoration: none;
+    color: #4d3252;
+    height: 45px;
+    width: 55px;
+    display: block;
+    line-height: 45px;
+  }
+  .pagination li.active {
+    box-shadow: inset -3px -3px 7px #ffffff73,
+      inset 3px 3px 5px rgba(94, 104, 121, 0.288);
+      background-color: red;
+  }
+  .pagination li.active a {
+    font-size: 17px;
+    color: white;
+    font-weight: 900;
+  }
+  .no_record
+  {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      width: 60%;
+      height: auto;
+      margin-left: 20%;
+      margin-right: 20%;
+      margin-bottom: 4%;
+      margin-top: 3%;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      background-color: red;
+  }
+  .no_record #no_title
+  {
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: white;
+      padding-left:15px ;
+  }
+  
